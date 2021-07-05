@@ -1,6 +1,30 @@
 # CIFAR10 image recognition using ResNet-18 architecture
 
-## Modelling Techniques
+Let's look into some more advanced concepts.
+
+## Learning Time
+
+### Grad-CAM: Gradient-weighted Class Activation Mapping
+Convolutional Neural Network (CNN)-based models can be made more transparent by visualizing the regions of input that are "important" for predictions from these models - or visual explanations. Gradient-weighted Class Activation Mapping (Grad-CAM), uses the class-specific gradient information flowing into the final convolutional layer of a CNN to produce a coarse localization map of the important regions in the image.
+
+![image](/Output%20Images%20and%20Logs/gradcam_flow.JPG)
+
+Gradient-weighted Class Activation Mapping (GradCAM) uses the gradients of any target concept (say logits for 'dog' or even a caption), flowing into the final convolutional layer to produce a coarse localization map highlighting the important regions in the image for predicting the concept. We take the final convolutional feature map, and then we weigh every channel in that feature with the gradient of the class with respect to the channel. It tells us how intensely the input image activates different channels by how important each channel is with regard to the class. It does not require any re-training or change in the existing architecture.
+
+
+## Objective
+
+* [ ] Train for 40 Epochs
+* [ ] Display 20 misclassified images
+* [ ] Display 20 GradCam output on the SAME misclassified images
+* [ ] Apply the following transforms while training:
+  * [ ] RandomCrop(32, padding=4)
+  * [ ] CutOut(16x16)
+  * [ ] Rotate(±5°)
+* [ ] Must use ReduceLROnPlateau
+* [ ] Must use LayerNormalization ONLY
+
+## Results
 
   1. Model: ResNet18
   2. Total Train data: 60,000 | Total Test Data: 10,000
@@ -25,19 +49,19 @@
 * [Model file](https://github.com/Arijit-datascience/pytorch_cifar10/blob/main/model/resnet.py): This describes the ResNet-18 architecture with Layer Normalization  
 <i>Referrence: https://github.com/kuangliu/pytorch-cifar/blob/master/models/resnet.py</i>  
 
-* [utils](https://github.com/Arijit-datascience/pytorch_cifar10/blob/main/utils/utils.py): Utils code contains the below things:-  
+* [utils](https://github.com/Arijit-datascience/pytorch_cifar10/blob/main/utils/utils.py): Utils code contains the following components:-  
   1. Data Loaders  
   2. Albumentations  
   3. Accuracy Plots
   4. Misclassification Image Plots
   5. Seed
 
-* [main file](https://github.com/Arijit-datascience/pytorch_cifar10/blob/main/main.py): Main code contains the below things:-  
+* [main file](https://github.com/Arijit-datascience/pytorch_cifar10/blob/main/main.py): Main code contains the following functions:-  
   1. Train code
   2. Test code
   3. Main function for training and testing the model  
 
-* [Colab file](/pytorch_cifar10_resnet.ipynb): The Google Colab file contains the below things:-  
+* [Colab file](/pytorch_cifar10_resnet.ipynb): The Google Colab file contains the following steps:-  
   1. Cloning the GIT Repository
   2. Loading data calling the data loader function from utils file
   3. Model Summary
@@ -47,7 +71,7 @@
   7. Plotting the Gradcam for same 20 misclassified images
 
 ## Model Summary
-![image](https://user-images.githubusercontent.com/65554220/124408900-e1d17200-dd64-11eb-9a1f-0d4fc491152b.png)
+![image](/Output%20Images%20and%20Logs/model_summary.JPG)
 
 ## Plots
 
@@ -63,7 +87,4 @@
 ## Collaborators
 Abhiram Gurijala  
 Arijit Ganguly  
-Rohin Sequeira  
-
-
-
+Rohin Sequeira
