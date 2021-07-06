@@ -14,15 +14,15 @@ Gradient-weighted Class Activation Mapping (GradCAM) uses the gradients of any t
 
 ## Objective
 
-* [ ] Train for 40 Epochs
-* [ ] Display 20 misclassified images
-* [ ] Display 20 GradCam output on the SAME misclassified images
-* [ ] Apply the following transforms while training:
-  * [ ] RandomCrop(32, padding=4)
-  * [ ] CutOut(16x16)
-  * [ ] Rotate(±5°)
-* [ ] Must use ReduceLROnPlateau
-* [ ] Must use LayerNormalization ONLY
+* [x] Train for 40 Epochs
+* [x] Display 20 misclassified images
+* [x] Display 20 GradCam output on the SAME misclassified images
+* [x] Apply the following transforms while training:
+  * [x] RandomCrop(32, padding=4)
+  * [x] CutOut(16x16)
+  * [x] Rotate(±5°)
+* [x] Must use ReduceLROnPlateau
+* [x] Must use LayerNormalization ONLY
 
 ## Results
 
@@ -46,7 +46,7 @@ Gradient-weighted Class Activation Mapping (GradCAM) uses the gradients of any t
 
 ## Code Structure
 
-* [Model file](https://github.com/Arijit-datascience/pytorch_cifar10/blob/main/model/resnet.py): This describes the ResNet-18 architecture with Layer Normalization  
+* [resnet.py](https://github.com/Arijit-datascience/pytorch_cifar10/blob/main/model/resnet.py): This describes the ResNet-18 architecture with Layer Normalization  
 <i>Referrence: https://github.com/kuangliu/pytorch-cifar/blob/master/models/resnet.py</i>  
 
 * [utils](https://github.com/Arijit-datascience/pytorch_cifar10/blob/main/utils/utils.py): Utils code contains the following components:-  
@@ -56,7 +56,7 @@ Gradient-weighted Class Activation Mapping (GradCAM) uses the gradients of any t
   4. Misclassification Image Plots
   5. Seed
 
-* [main file](https://github.com/Arijit-datascience/pytorch_cifar10/blob/main/main.py): Main code contains the following functions:-  
+* [main.py](https://github.com/Arijit-datascience/pytorch_cifar10/blob/main/main.py): Main code contains the following functions:-  
   1. Train code
   2. Test code
   3. Main function for training and testing the model  
