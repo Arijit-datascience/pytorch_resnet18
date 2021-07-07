@@ -71,18 +71,18 @@ Gradient-weighted Class Activation Mapping (GradCAM) uses the gradients of any t
   7. Plotting the Gradcam for same 20 misclassified images
 
 ## Model Summary
-![image](/Output%20Images%20and%20Logs/model_summary.JPG)
+![image](/images_and_logs/model_summary.JPG)
 
 ## Plots
 
   1. Train & Test Loss, Train & Test Accuracy  
-  ![image](https://user-images.githubusercontent.com/65554220/124408182-4be91780-dd63-11eb-9c6a-85d552590731.png)  
+  ![image](/images_and_logs/accuracy_and_loss.png)  
 
   2. Misclassified Images  
-  ![image](https://user-images.githubusercontent.com/65554220/124408305-8a7ed200-dd63-11eb-9791-29ebc99a2e7a.png)  
+  ![image](/images_and_logs/misclassified_images.png)  
 
   3. Gradcam Images  
-  ![image](https://user-images.githubusercontent.com/65554220/124408315-95396700-dd63-11eb-8df7-2b5a801d687a.png)  
+  ![image](/images_and_logs/gradcam.png)  
 
 ## Collaborators
 Abhiram Gurijala  
