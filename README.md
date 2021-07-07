@@ -42,7 +42,7 @@ Gradient-weighted Class Activation Mapping (GradCAM) uses the gradients of any t
       3. Rotate(5 degree)
       4. CoarseDropout
       5. Normalization 
-   12. Misclassified Images: 997 images were misclassified out of 10,000
+   12. Misclassified Images: 1104 images were misclassified out of 10,000
 
 ## Code Structure
 
